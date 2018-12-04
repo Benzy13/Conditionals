@@ -2,13 +2,7 @@
 
 namespace Conditionals
 {
-    public enum Season
-    {
-        Spring,
-        Summer,
-        Autumn,
-        Winter
-    }
+
     class Program
     {
         static void Main(string[] args)
@@ -38,6 +32,28 @@ namespace Conditionals
 
             float price = (isGoldCustomer) ? 19.95f : 29.95f;
             Console.WriteLine(price);
+
+            var season = Season.Autumn;
+
+            switch (season)
+            {
+                case Season.Autumn:
+                    Console.WriteLine("It's Autumn and a beautiful season.");
+                    break;
+
+                case Season.Summer:
+                    Console.WriteLine("Lte's go to the beach!");
+                    break;
+
+                case Season.Winter:
+                case Season.Spring:
+                    Console.WriteLine("Promotion!");
+                    break;
+
+                default:
+                    Console.WriteLine("I don't undersand that season.");
+                    break;
+            }
         }
     }
 }
